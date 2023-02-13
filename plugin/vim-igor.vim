@@ -29,7 +29,7 @@ function! GetBuffers()
 endfunction
 
 function! AlternativeEditor()
-    :exec '!' g:alternative_editor join(GetBuffers())
+    :exec '!' g:alternative_editor getcwd() join(GetBuffers())
 endfunction
 
 command! -nargs=0 AlternativeEditor call AlternativeEditor()
